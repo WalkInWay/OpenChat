@@ -3,7 +3,7 @@
  * @type {string}
  * @const
  */
-const LOGIN = 'Костя ^.^'
+const LOGIN = 'Пятнистый кот'
 
 // подключение зависимостей
 const http = require('http')
