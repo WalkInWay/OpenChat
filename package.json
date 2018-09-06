@@ -1,0 +1,27 @@
+{
+  "name": "open-chat",
+  "version": "1.0.0",
+  "description": "Chat application is created for open lesson for Digital-Banana school",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "keywords": [
+    "chat",
+    "digital_banana",
+    "open_lesson"
+  ],
+  "author": "Konstantin Nosov",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-jsx": "^5.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^3.1.0"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "ws": "^6.0.0"
+  }
+}
