@@ -120,6 +120,7 @@ textarea {
     vertical-align: top;
     padding: 0;
     box-sizing: border-box;
+    border: none;
     border-top: 1px solid lightblue;
 }
 
