@@ -46,6 +46,7 @@ html {
 
 .users {
     flex: 0 1 200px;
+    border-right: 1px solid lightblue;
 }
 
 .users:before {
@@ -119,7 +120,7 @@ textarea {
     vertical-align: top;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid lightblue
+    border-top: 1px solid lightblue;
 }
 
 button {
