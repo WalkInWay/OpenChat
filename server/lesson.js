@@ -3,7 +3,7 @@
  * @type {string}
  * @const
  */
-const LOGIN = 'Пятнистый кот'
+const LOGIN = 'Костя ^.^'
 
 // подключение зависимостей
 const http = require('http')
@@ -21,8 +21,6 @@ function getFileByUrl (url) {
   const filePath = path.extname(url)
     ? path.join(__dirname, '../client/', url)
     : path.join(__dirname, '../client/', url, 'index.html')
-
-  console.log(filePath)
 
   return new Promise((resolve, reject) => {
     fs.stat(filePath, (err, stats) => {
@@ -72,6 +70,7 @@ const checkError = error => { if (error) throw error }
 function connectToChatServer () {
   const socketServer = http.createServer().listen(10000)
 
+  console.log('Вы онлайн')
   setInterval(checkMyOnline, 2000)
 
   return new WebSocket.Server({server: socketServer})
@@ -117,6 +116,8 @@ function sendToAll (message) {
     {author: LOGIN, text: message},
     checkError
   )
+
+  console.log(`Рассылка >>> ${LOGIN}: ${message}`)
 }
 
 /**
@@ -138,6 +139,7 @@ function whileAlive (connection, callback) {
 console.log('Сервер запущен!')
 console.log('=(^.^)=')
 console.log('http://localhost:8000')
+console.log('')
 
 module.exports = {
   whileAlive,
